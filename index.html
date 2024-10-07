@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML and CSS Comprehensive Cheatsheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .example {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .rendered-example {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            margin-top: 10px;
+        }
+        /* Tab styles */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Table of Contents */
+        .toc {
+            margin-bottom: 30px;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin-bottom: 5px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        /* CSS Cheat Sheet Styles */
+        .css-example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #9b59b6;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        /* Highlighted code */
+        .code-block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        /* Syntax highlighting */
+        .code-block code {
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML and CSS Comprehensive Cheatsheet</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" data-tab="html">HTML Cheatsheet</div>
+        <div class="tab" data-tab="css">CSS Cheatsheet</div>
+    </div>
+
+    <!-- HTML Cheatsheet Content -->
+    <div id="html" class="tab-content active">
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#html-doc-structure">Document Structure</a></li>
+                <li><a href="#html-text-elements">Text Elements</a></li>
+                <li><a href="#html-formatting-elements">Formatting Elements</a></li>
+                <li><a href="#html-links-images">Links and Images</a></li>
+                <li><a href="#html-lists">Lists</a></li>
+                <li><a href="#html-tables">Tables</a></li>
+                <li><a href="#html-forms">Forms</a></li>
+                <li><a href="#html-semantic-elements">Semantic Elements</a></li>
+                <li><a href="#html-media-elements">Media Elements</a></li>
+                <li><a href="#html-meta-tags">Meta Tags and SEO</a></li>
+                <li><a href="#html-character-entities">Character Entities</a></li>
+                <li><a href="#html-global-attributes">Global Attributes</a></li>
+            </ul>
+        </div>
+
+        <!-- Document Structure Section -->
+        <div class="section" id="html-doc-structure">
+            <h2>Document Structure</h2>
+            <table>
+                <tr>
+                    <th>Basic Structure</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td>
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;...<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Awesome Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>The basic structure defines the essential elements of an HTML document.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Text Elements Section -->
+        <div class="section" id="html-text-elements">
+            <h2>Text Elements</h2>
+            <!-- Heading Tags -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;h1&gt;...&lt;/h1&gt;</code> to <code>&lt;h6&gt;...&lt;/h6&gt;</code></td>
+                    <td>Heading levels (1-6)</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;h1&gt;Level 1 Heading&lt;/h1&gt;
+&lt;h2&gt;Level 2 Heading&lt;/h2&gt;
+&lt;h3&gt;Level 3 Heading&lt;/h3&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <h1>Level 1 Heading</h1>
+                            <h2>Level 2 Heading</h2>
+                            <h3>Level 3 Heading</h3>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Paragraph Tag -->
+                <tr>
+                    <td><code>&lt;p&gt;...&lt;/p&gt;</code></td>
+                    <td>Paragraph</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is a paragraph of text.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Span Tag -->
+                <tr>
+                    <td><code>&lt;span&gt;...&lt;/span&gt;</code></td>
+                    <td>Inline container</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is a &lt;span&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is a <span style="background-color: yellow;">highlighted</span> word.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Formatting Elements Section -->
+        <div class="section" id="html-formatting-elements">
+            <h2>Formatting Elements</h2>
+            <!-- Formatting Tags -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+                    <td>Bold text</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is <strong>bold</strong> text.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
+                    <td>Italic text</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is &lt;em&gt;italic&lt;/em&gt; text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is <em>italic</em> text.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;u&gt;...&lt;/u&gt;</code></td>
+                    <td>Underlined text</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is <u>underlined</u> text.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;del&gt;...&lt;/del&gt;</code></td>
+                    <td>Strikethrough text</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is &lt;del&gt;deleted&lt;/del&gt; text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is <del>deleted</del> text.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;...&lt;/mark&gt;</code></td>
+                    <td>Highlighted text</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p&gt;This is &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p>This is <mark>highlighted</mark> text.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Links and Images Section -->
+        <div class="section" id="html-links-images">
+            <h2>Links and Images</h2>
+            <!-- Links and Images -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <!-- Hyperlink -->
+                <tr>
+                    <td><code>&lt;a href="URL"&gt;...&lt;/a&gt;</code></td>
+                    <td>Hyperlink</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <a href="https://www.example.com">Visit Example</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Image -->
+                <tr>
+                    <td><code>&lt;img src="URL" alt="description"&gt;</code></td>
+                    <td>Image</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;img src="image.jpg" alt="An image"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <img src="https://via.placeholder.com/150" alt="An image">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Lists Section -->
+        <div class="section" id="html-lists">
+            <h2>Lists</h2>
+            <!-- Lists -->
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <!-- Unordered List -->
+                <tr>
+                    <td>Unordered List (<code>&lt;ul&gt;</code>)</td>
+                    <td>Items with bullet points</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item One&lt;/li&gt;
+    &lt;li&gt;Item Two&lt;/li&gt;
+    &lt;li&gt;Item Three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <ul>
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Ordered List -->
+                <tr>
+                    <td>Ordered List (<code>&lt;ol&gt;</code>)</td>
+                    <td>Items with numbers</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;ol&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+    &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <ol>
+                                <li>First</li>
+                                <li>Second</li>
+                                <li>Third</li>
+                            </ol>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Description List -->
+                <tr>
+                    <td>Description List (<code>&lt;dl&gt;</code>)</td>
+                    <td>Terms and descriptions</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <dl>
+                                <dt>HTML</dt>
+                                <dd>HyperText Markup Language</dd>
+                                <dt>CSS</dt>
+                                <dd>Cascading Style Sheets</dd>
+                            </dl>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Tables Section -->
+        <div class="section" id="html-tables">
+            <h2>Tables</h2>
+            <!-- Tables -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <!-- Table Structure -->
+                <tr>
+                    <td>
+                        <code>&lt;table&gt;&lt;/table&gt;</code><br>
+                        <code>&lt;tr&gt;&lt;/tr&gt;</code><br>
+                        <code>&lt;th&gt;&lt;/th&gt;</code><br>
+                        <code>&lt;td&gt;&lt;/td&gt;</code>
+                    </td>
+                    <td>Defines a table and its components</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;table&gt;
+    &lt;caption&gt;Monthly Savings&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Savings&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;$100&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;February&lt;/td&gt;
+            &lt;td&gt;$80&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <table>
+                                <caption>Monthly Savings</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Savings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>January</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>February</td>
+                                        <td>$80</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Forms Section -->
+        <div class="section" id="html-forms">
+            <h2>Forms</h2>
+            <!-- Forms -->
+            <table>
+                <tr>
+                    <th>Input Type</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <!-- Text Input -->
+                <tr>
+                    <td><code>text</code></td>
+                    <td>Single-line text input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="text" name="username"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Password Input -->
+                <tr>
+                    <td><code>password</code></td>
+                    <td>Password input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="password" name="password"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Email Input -->
+                <tr>
+                    <td><code>email</code></td>
+                    <td>Email input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="email" name="email"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Number Input -->
+                <tr>
+                    <td><code>number</code></td>
+                    <td>Numeric input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="number" name="quantity" min="1" max="10"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="number" name="quantity" min="1" max="10" placeholder="Quantity">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Radio Buttons -->
+                <tr>
+                    <td><code>radio</code></td>
+                    <td>Single-choice input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="radio" name="gender" value="male"&gt; Male<br>
+&lt;input type="radio" name="gender" value="female"&gt; Female</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="radio" name="gender" value="male"> Male<br>
+                            <input type="radio" name="gender" value="female"> Female
+                        </div>
+                    </td>
+                </tr>
+                <!-- Checkboxes -->
+                <tr>
+                    <td><code>checkbox</code></td>
+                    <td>Multiple-choice input</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="checkbox" name="vehicle" value="bike"&gt; Bike<br>
+&lt;input type="checkbox" name="vehicle" value="car"&gt; Car</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="checkbox" name="vehicle" value="bike"> Bike<br>
+                            <input type="checkbox" name="vehicle" value="car"> Car
+                        </div>
+                    </td>
+                </tr>
+                <!-- Submit Button -->
+                <tr>
+                    <td><code>submit</code></td>
+                    <td>Submit form</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;input type="submit" value="Submit"&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Full Form Example -->
+                <tr>
+                    <td colspan="4">
+                        <h3>Full Form Example</h3>
+                        <div class="example">
+                            <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+
+    &lt;label&gt;Gender:&lt;/label&gt;
+    &lt;input type="radio" name="gender" value="male"&gt; Male
+    &lt;input type="radio" name="gender" value="female"&gt; Female
+
+    &lt;label&gt;Hobbies:&lt;/label&gt;
+    &lt;input type="checkbox" name="hobby" value="reading"&gt; Reading
+    &lt;input type="checkbox" name="hobby" value="sports"&gt; Sports
+
+    &lt;label for="country"&gt;Country:&lt;/label&gt;
+    &lt;select id="country" name="country"&gt;
+        &lt;option value="usa"&gt;USA&lt;/option&gt;
+        &lt;option value="canada"&gt;Canada&lt;/option&gt;
+        &lt;option value="uk"&gt;UK&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                        <div class="rendered-example">
+                            <form action="#" method="post">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required><br><br>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required><br><br>
+
+                                <label>Gender:</label>
+                                <input type="radio" name="gender" value="male"> Male
+                                <input type="radio" name="gender" value="female"> Female<br><br>
+
+                                <label>Hobbies:</label>
+                                <input type="checkbox" name="hobby" value="reading"> Reading
+                                <input type="checkbox" name="hobby" value="sports"> Sports<br><br>
+
+                                <label for="country">Country:</label>
+                                <select id="country" name="country">
+                                    <option value="usa">USA</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">UK</option>
+                                </select><br><br>
+
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Semantic Elements Section -->
+        <div class="section" id="html-semantic-elements">
+            <h2>Semantic Elements</h2>
+            <!-- Semantic Elements -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;header&gt;</code></td>
+                    <td>Represents introductory content</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;header&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <header>
+                                <h1>Welcome to My Website</h1>
+                            </header>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;footer&gt;</code></td>
+                    <td>Represents footer content</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;footer&gt;
+    &lt;p&gt;© 2024 My Website&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <footer>
+                                <p>© 2024 My Website</p>
+                            </footer>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Media Elements Section -->
+        <div class="section" id="html-media-elements">
+            <h2>Media Elements</h2>
+            <!-- Media Elements -->
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;audio&gt;</code></td>
+                    <td>Audio content</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <audio controls>
+                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;video&gt;</code></td>
+                    <td>Video content</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;video controls width="320" height="240"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <video controls width="320" height="240">
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Meta Tags Section -->
+        <div class="section" id="html-meta-tags">
+            <h2>Meta Tags and SEO</h2>
+            <!-- Meta Tags -->
+            <table>
+                <tr>
+                    <th>Meta Tag</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                    <td>Defines the character encoding</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;meta name="description" content="description"&gt;</code></td>
+                    <td>Provides a brief description for SEO</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;meta name="description" content="This is a description of the page."&gt;</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Character Entities Section -->
+        <div class="section" id="html-character-entities">
+            <h2>Character Entities</h2>
+            <!-- Character Entities -->
+            <table>
+                <tr>
+                    <th>Entity</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>&amp;amp;</code></td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&amp;amp;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            &amp;
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&amp;lt;</code></td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&amp;lt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            &lt;
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Global Attributes Section -->
+        <div class="section" id="html-global-attributes">
+            <h2>Global Attributes</h2>
+            <!-- Global Attributes -->
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                    <th>Code Example</th>
+                    <th>Rendered Output</th>
+                </tr>
+                <tr>
+                    <td><code>class</code></td>
+                    <td>Assigns one or more class names</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;p class="highlight"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <p class="highlight" style="background-color: yellow;">This is a paragraph.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Specifies a unique ID for an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>&lt;div id="main"&gt;Main Content&lt;/div&gt;</code></pre>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rendered-example">
+                            <div id="main" style="border: 1px solid #333; padding: 10px;">Main Content</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- CSS Cheatsheet Content -->
+    <div id="css" class="tab-content">
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#css-syntax">CSS Syntax</a></li>
+                <li><a href="#css-selectors">Selectors</a></li>
+                <li><a href="#css-properties">Properties</a></li>
+                <li><a href="#css-box-model">Box Model</a></li>
+                <li><a href="#css-flexbox">Flexbox</a></li>
+                <li><a href="#css-grid">Grid</a></li>
+                <li><a href="#css-animations">Animations</a></li>
+                <li><a href="#css-transitions">Transitions</a></li>
+            </ul>
+        </div>
+
+        <!-- CSS Syntax Section -->
+        <div class="section" id="css-syntax">
+            <h2>CSS Syntax</h2>
+            <div class="css-example">
+                <pre><code>selector {
+    property: value;
+}</code></pre>
+            </div>
+            <div class="rendered-example">
+                <p>This is how you write CSS rules.</p>
+            </div>
+        </div>
+
+        <!-- CSS Selectors Section -->
+        <div class="section" id="css-selectors">
+            <h2>Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>*</code></td>
+                    <td>Universal selector</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>* {
+    margin: 0;
+    padding: 0;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>element</code></td>
+                    <td>Type selector</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>p {
+    color: blue;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.class</code></td>
+                    <td>Class selector</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>.highlight {
+    background-color: yellow;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>#id</code></td>
+                    <td>ID selector</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>#main {
+    width: 100%;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>[attribute]</code></td>
+                    <td>Attribute selector</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>input[type="text"] {
+    border: 1px solid black;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Properties Section -->
+        <div class="section" id="css-properties">
+            <h2>Properties</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>color</code></td>
+                    <td>Sets the text color</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>p {
+    color: red;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>background-color</code></td>
+                    <td>Sets the background color</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    background-color: lightblue;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>margin</code></td>
+                    <td>Sets the space outside an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    margin: 10px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>padding</code></td>
+                    <td>Sets the space inside an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    padding: 10px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border</code></td>
+                    <td>Sets the border around an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    border: 1px solid black;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Box Model Section -->
+        <div class="section" id="css-box-model">
+            <h2>Box Model</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td>Sets the width of an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    width: 200px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>height</code></td>
+                    <td>Sets the height of an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    height: 200px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>margin</code></td>
+                    <td>Sets the margin around an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    margin: 20px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>padding</code></td>
+                    <td>Sets the padding inside an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    padding: 20px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border</code></td>
+                    <td>Sets the border around an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    border: 2px solid black;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Flexbox Section -->
+        <div class="section" id="css-flexbox">
+            <h2>Flexbox</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>display: flex;</code></td>
+                    <td>Defines a flex container</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    display: flex;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>flex-direction</code></td>
+                    <td>Sets the direction of flex items</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    flex-direction: row;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>justify-content</code></td>
+                    <td>Aligns items horizontally</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    justify-content: center;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Grid Section -->
+        <div class="section" id="css-grid">
+            <h2>Grid</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>display: grid;</code></td>
+                    <td>Defines a grid container</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    display: grid;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>grid-template-columns</code></td>
+                    <td>Defines the number of columns</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    grid-template-columns: 1fr 1fr;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>grid-gap</code></td>
+                    <td>Sets the gap between grid items</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    grid-gap: 10px;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Animations Section -->
+        <div class="section" id="css-animations">
+            <h2>Animations</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>@keyframes</code></td>
+                    <td>Defines an animation</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>animation</code></td>
+                    <td>Applies the animation to an element</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    animation: fade 2s;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CSS Transitions Section -->
+        <div class="section" id="css-transitions">
+            <h2>Transitions</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>transition</code></td>
+                    <td>Defines a transition effect</td>
+                    <td>
+                        <div class="example">
+                            <pre><code>div {
+    transition: background-color 0.5s;
+}</code></pre>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(item => item.classList.remove('active'));
+                // Hide all content
+                contents.forEach(content => content.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                // Show corresponding content
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
